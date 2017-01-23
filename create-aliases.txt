@@ -7,3 +7,6 @@ add aliases
 	alias l="ls -al"
 	alias lm="ls -al|more"
 	
+reload bashrc
+
+	source ~/.bashrc
