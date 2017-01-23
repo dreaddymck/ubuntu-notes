@@ -1,0 +1,9 @@
+edit file
+
+	nano .bash_aliases
+
+add aliases
+
+	alias l="ls -al"
+	alias lm="ls -al|more"
+	
