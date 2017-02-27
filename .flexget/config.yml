@@ -1,0 +1,49 @@
+
+web_server: yes
+templates:
+  tv:
+    private_torrents: no
+    series:
+      settings:
+        tv:
+          set:
+            path: /home/dreaddy/Videos/TV/{{series_name}}
+          quality: hdtv+
+      tv:
+        - archer:
+            identified_by: ep
+        - Beavis and Butt-head:
+            identified_by: ep
+        - Real Time with Bill Maher:
+            identified_by: ep
+        - South Park:
+            identified_by: ep
+        - the daily show:
+            identified_by: ep
+        - last week tonight:
+            identified_by: ep
+        - stephen colbert:
+            identified_by: ep
+        - full frontal with samantha bee:
+            identified_by: ep
+
+    transmission:
+      enabled: yes
+      host: localhost
+      port: 9091
+
+tasks:
+  ezrss:
+    priority: 1
+    rss: https://eztv.ag/ezrss.xml
+    template: tv
+  extratorrent.com-tv:
+    priority: 2
+    rss: http://extra.to/rss.xml?type=popular&cid=8
+    template: tv
+
+
+schedules:
+  - tasks: '*'
+    interval:
+      hours: 1
