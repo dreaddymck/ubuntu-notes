@@ -1,0 +1,31 @@
+# Unfinished
+#
+# PS3 sixaxis USB for rpcs3
+
+Axis scaling: false
+Z axis triggers: false
+
+Select: 0
+Start: 3
+
+Triangle: 12
+Circle: 13
+Cross: 14
+Square: 15
+
+R1: 9
+R2: 11
+R3: 2
+L1: 8
+L2: 10
+L3: 1
+
+Up: 4
+Down: 6
+Left: 7
+Right: 5
+
+Left stick X axis: 2
+Left stick Y axis: 3
+Right stick X axis: 0
+Right stick Y axis: 1
