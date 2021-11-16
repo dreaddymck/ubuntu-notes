@@ -1,0 +1,21 @@
+#!/bin/bash 
+#
+echo "Warning: updating wordpress plugin version with current npm-git version values."
+TARGET="index.php"
+PWD=$(pwd)
+echo "Current working directory $PWD"
+PACKAGE_VERSION=$(cat package.json \
+| grep version \
+| head -1 \
+| awk -F: '{ print $2 }' \
+| sed 's/[",]//g' \
+| tr -d '[[:space:]]')
+GIT_VERSION=$(eval "git rev-parse --short HEAD")
+if [ ! -z "$GIT_VERSION" ]; 
+then
+    echo "Cuurent npm-git version $PACKAGE_VERSION-$GIT_VERSION"
+    $(eval "sed -i '0,/Version:.*/{s/Version:.*/Version: $PACKAGE_VERSION-$GIT_VERSION/}' '$PWD/$TARGET'")
+    ## $(eval "sed -i 's/Version:.*/Version: $VAR/' '$PWD/$1'")
+    echo "Done, please confirm changes applied to $PWD/$TARGET"
+fi
+exit 0
