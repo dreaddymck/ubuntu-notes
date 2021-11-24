@@ -1,8 +1,0 @@
-Open Nautilus
-Navigate to /usr/share/applications
-Right-click on the application you want to use and select copy 
-Click on your desktop and select paste
-Right click on the icon that has just been created and select properties
-On the Permissions tab check Execute then click Close
-
-- http://askubuntu.com/questions/450266/an-easy-way-to-create-a-desktop-shortcut
