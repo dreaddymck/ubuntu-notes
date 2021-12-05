@@ -1,0 +1,1 @@
+alias wsl-home='cd "$(wslpath "$(wslvar USERPROFILE)")"'
